@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Homepage - OhMyFood</title>
-    <link rel="stylesheet" type="text/css" href="./scss_css/style.css">
-		<link rel="stylesheet" type="text/css" href="./scss/homepage.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="./assets/css/homepage.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" 
-            rel="stylesheet"> 
+                rel="stylesheet"> 
 </head>
 
 <body>
     <header class="navbar">
-        <img src="./images/logo/ohmyfood.png" alt="logo OhMyFood" class="navbar__logo">
+        <img src="./assets/images/logo/ohmyfood@2x.svg" 
+            alt="logo OhMyFood" class="navbar__logo">
     </header>
 
     <main>
         <section class="hero-header">
-            <!-- icône fontawesome maps -->
-            <!-- formaulaire maps -->
+            <div class="search">
+                <i class="fa-solid fa-location-dot"></i>
+                <!-- formaulaire maps -->
+            </div>
             <h1>
                 Réservez le menu qui vous convient
             </h1>
@@ -29,33 +31,33 @@
                 Découvrez des restaurants d'exception,
                 sélectionnés par nos soins.
             </p>
-            <button>
+            <button class="btn">
                 Explorez nos restaurants
             </button>
         </section>
 
-        <section class=""> <!-- fonctionnement -->
+        <section class="fonctionnement">
             <h2>
                 Fonctionnement
             </h2>
             <div class="notice">
                 <div class="notice-card">
-                    <!-- icône ou bloc n°1 -->
-                    <!-- icône fontawesome -->
+                    <p class="number">1</p> <!-- font rond -->
+                    <img src="./assets/images/icones/mobile-screen-button.png">
                     <p>
                         Choisissez un restaurant
                     </p>
                 </div>
                 <div class="notice-card">
-                    <!-- icône ou bloc n°2 -->
-                    <!-- icône fontawesome -->
+                    <p class="number">2</p> <!-- font rond -->
+                    <img src="./assets/images/icones/list-ul.png">
                     <p>
                         Composez votre menu
                     </p>
                 </div>
                 <div class="notice-card">
-                    <!-- icône ou bloc n°3 -->
-                    <!-- icône fontawesome -->
+                    <p class="number">3</p> <!-- font rond -->
+                    <img src="./assets/images/icones/store.png">
                     <p>
                         Dégustez au restaurant
                     </p>
@@ -79,7 +81,7 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <!-- icône coeur fontawesome -->
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </article>
                 <article class="card">
@@ -92,7 +94,7 @@
                             <h3>La note enchanté</h3>
                             <p>Charonne</p>
                         </div>
-                        <!-- icône coeur fontawesome -->
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </article>
                 <article class="card">
@@ -102,7 +104,7 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </div>
-                        <!-- icône coeur fontawesome -->
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </article>
                 <article class="card">
@@ -112,7 +114,7 @@
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <!-- icône coeur fontawesome -->
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </article>
             </div>
@@ -120,18 +122,18 @@
     </main>
 
     <footer>
-        <img> <!-- logo blanc -->
-        <div class="">
-            <div class="link-icone">
-                <!-- icône fontawesome-->
-                <a>Proposer un restaurant</a>
+        <img src="./assets/images/logo/ohmyfood@2x.svg" class="logo_white">
+        <div class="links">
+            <div class="links__icon">
+                <img src="./assets/images/icones/cutlery.png" class="little_icon">
+                <a href="#" class="links__a">Proposer un restaurant</a>
             </div>
-            <div class="link-icone">
-                <!-- icône fontawesome-->
-                <a>Devenir partenaire</a>
+            <div class="links__icon">
+                <img src="./assets/images/icones/handshake.png" class="little_icon">
+                <a href="#" class="links__a">Devenir partenaire</a>
             </div>
-            <a>Mentions légales</a>
-            <a>Contact</a>
+            <a href="#">Mentions légales</a>
+            <a href="email@sample.com">Contact</a>
         </div>
     </footer>
 </body>

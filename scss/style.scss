@@ -1,0 +1,113 @@
+            /***** MOBILE FIRST *****/
+            /** (between 320px and 767px) **/
+
+// Design System
+    @import './_variables';
+    @import './_placehorder';
+
+* {
+    margin :0;
+}
+
+body {
+    font-family: $main-font;
+}
+
+// Header
+.navbar {
+    height: 65px;
+    background-color: $white;
+    border-bottom: solid 1px $grey; //rajout ombre portée
+    @extend %flex-center;
+    .navbar__logo {
+        height: 36px;
+        width: 197px;
+    }
+}
+
+// Body
+.btn {
+    height: 50px;
+    width: 220px;
+    border-radius: 25px;
+    border: none;
+    color: $white;
+    background: linear-gradient($pink, $purple);
+    @extend %flex-center;
+    font-size: $second-font-size;
+    font-weight: 500;
+}
+
+.fa-heart {
+    height: 20px;
+    width: 20px;
+}
+
+//Footer
+footer {
+    height: 142px;
+    background-color: $dark-grey;
+    gap: 16px;
+    padding: 22px 25px;
+}
+
+footer a {
+    color: $white;
+    font-size: $second-font-size;
+    text-decoration: none;
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+.logo_white {
+    height: 30px;
+    width: 105px;
+    padding-bottom: 16px;
+    //color svg
+    filter: invert(100%) sepia(0%) saturate(0%) 
+        hue-rotate(356deg) brightness(102%) contrast(102%);
+}
+
+.links {
+    @extend %flex-column;
+    gap: 7px;
+    .links__icon {
+        @extend %flex-row;
+        height: 19px;
+        gap: 11px;
+    }
+    .links__a {
+        font-weight: 600;
+        // le 500 n'est visiblement pas différent du 400
+    }
+}
+
+.little_icon {
+    height: 13px;
+    width: 11px;
+}
+
+.links__icon .little_icon {
+    position: relative;
+    top: 3px;
+}
+
+
+
+
+
+/*** Medium devices (tablets, between 768px than 1024px) ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* ... */
+}
+
+/*** Large devices (desktop, between 1025px and 1440px) ***/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* ... */
+}
+
+/*** Large devices (desktop, more than 1440px) ***/
+@media (min-width: 1441px) {
+    /* ... */
+}
