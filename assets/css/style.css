@@ -1,0 +1,85 @@
+/***** MOBILE FIRST *****/
+/** (between 320px and 767px) **/
+/*** Colors ***/
+/*** Text Configuration ***/
+.btn, .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.navbar {
+  height: 65px;
+  background-color: #FFFFFF;
+  border-bottom: solid 1px #7E7E7E;
+}
+.navbar .navbar__logo {
+  height: 36px;
+  width: 197px;
+}
+
+.btn {
+  height: 50px;
+  width: 220px;
+  border-radius: 25px;
+  border: none;
+  color: #FFFFFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+footer {
+  height: 166px;
+  color: #FFFFFF;
+  font-size: 16px;
+  background-color: #353535;
+  padding: 22px 25px;
+}
+
+.logo_white {
+  height: 27px;
+  width: 138px;
+  padding-bottom: 16px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(356deg) brightness(102%) contrast(102%);
+}
+
+.links {
+  gap: 7px;
+}
+.links .links__icon {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.links .links__icon .links__a {
+  font-weight: 500;
+}
+
+/*** Medium devices (tablets, between 768px than 1024px) ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ... */
+}
+/*** Large devices (desktop, between 1025px and 1440px) ***/
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* ... */
+}
+/*** Large devices (desktop, more than 1440px) ***/
+@media (min-width: 1441px) {
+  /* ... */
+}
+
+/*# sourceMappingURL=style.css.map */
