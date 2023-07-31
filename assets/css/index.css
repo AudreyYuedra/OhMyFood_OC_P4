@@ -1,0 +1,53 @@
+/***** MOBILE FIRST *****/
+/** (between 320px and 767px) **/
+/*** Colors ***/
+/*** Text Configuration ***/
+input, form, .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar {
+  height: 65px;
+  background-color: #FFFFFF;
+  border-bottom: solid 1px #7E7E7E;
+}
+.navbar .navbar__logo {
+  height: 36px;
+  width: 197px;
+}
+
+.hero-header {
+  height: 375px;
+  padding: 0, 25px, 40px, 25px;
+}
+
+.search {
+  height: 35px;
+  gap: 17px;
+}
+
+.fa-location-dot {
+  height: 16px;
+  width: 12px;
+  color: #353535;
+}
+
+input {
+  border: none;
+  font-weight: 600;
+  color: #353535;
+}
+
+/*# sourceMappingURL=index.css.map */

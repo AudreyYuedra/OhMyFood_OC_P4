@@ -1,0 +1,52 @@
+            /***** MOBILE FIRST *****/
+            /** (between 320px and 767px) **/
+
+// Design System
+@import './_variables';
+@import './_placehorder';
+
+
+
+
+// Header
+.navbar {
+    height: 65px;
+    background-color: $white;
+    border-bottom: solid 1px $grey; // ombre portée à rajouter
+    @extend %flex-center;
+    .navbar__logo {
+        height: 36px;
+        width: 197px;
+    }
+}
+
+
+// Hero Header
+.hero-header {
+    height: 375px;
+    padding: 0, 25px, 40px, 25px;
+}
+
+form {
+    @extend %flex-center;
+    @extend %flex-column;
+}
+
+.search {
+    height: 35px;
+    @extend %flex-row;
+    gap: 17px;
+}
+
+.fa-location-dot {
+    height: 16px;
+    width: 12px;
+    color: $dark-grey;
+}
+
+input {
+    @extend %flex-center;
+    border: none;
+    font-weight: 600;
+    color: $dark-grey;
+}
