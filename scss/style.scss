@@ -1,38 +1,84 @@
-            /***** MOBILE FIRST *****/
+            /*** Design System ***/
+
+    /** Variables **/
+//Colors
+$txt-color: #000000;
+$main-color: #FFFFFF;
+
+$bg-primary-color: #F6F6F6;     // homepage section + menu
+$bg-secondary-color: #EAEAEA;   // search
+
+$deco-primary-color: #9356DC;
+$deco-secondary-color: #FF79DA;
+$deco-tertiary-color: #99E2D0;
+
+$dark-grey: #353535;    // bg footer + fontawesome icons
+
+//Text Configuration
+$main-font: 'Roboto';
+$resto-font: 'Shrikhand';
+
+$main-font-size: 18px;    // general
+$second-font-size: 16px;
+
+$title-font-size: 24px;   // homepage
+$sub-menu-size: 17px;
+$tag-font-size: 14px;
+
+$resto-font-size: 28px;   // pages menu
+
+    /** Mixins **/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    }
+    
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    }
+
+
+                /***** MOBILE FIRST *****/
             /** (between 320px and 767px) **/
 
-// Design System
-    @import './_variables';
-    @import './_placehorder';
-
 * {
-    margin :0;
+    padding: 0;
+    margin: 0;
 }
-
 
 // Body
 body {
     font-family: $main-font;
+    color: $txt-color;
 }
 
 .btn {
-    display: inline-block;
     height: 50px;
     width: 220px;
     border-radius: 25px;
     border: none;
-    color: $white;
-    background: linear-gradient($pink, $purple);
-    @extend %flex-center;
+    color: $main-color;
+    background: linear-gradient($deco-secondary-color, 
+        $deco-primary-color);
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));  // ici, rajouter ombre portée
+    @include flex-center;
     font-size: $second-font-size;
     font-weight: 500;
-    // rajouter ombre portée
+    // ici, animation
 }
 
 .fa-heart {
     height: 22px;
     width: 21px;
-    color: $black;
+    color: $dark-grey;
+    // ici, animation
 }
 
 
@@ -45,7 +91,7 @@ footer {
 }
 
 footer a {
-    color: $white;
+    color: $main-color;
     font-size: $second-font-size;
     text-decoration: none;
     &:visited {
@@ -57,22 +103,21 @@ footer a {
     height: 30px;
     width: 105px;
     padding-bottom: 16px;
-    //color svg
     filter: invert(100%) sepia(0%) saturate(0%) 
-        hue-rotate(356deg) brightness(102%) contrast(102%);
+        hue-rotate(356deg) brightness(102%) 
+        contrast(102%); //color svg
 }
 
 .links {
-    @extend %flex-column;
+    @include flex-column;
     gap: 7px;
     .links__icon {
-        @extend %flex-row;
+        @include flex-row;
         height: 19px;
         gap: 11px;
     }
     .links__a {
-        font-weight: 600;
-        // le 500 n'est visiblement pas différent du 400
+        font-weight: 500;
     }
 }
 
@@ -85,6 +130,7 @@ footer a {
     position: relative;
     top: 3px;
 }
+
 
 
 

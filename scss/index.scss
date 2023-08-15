@@ -1,52 +1,232 @@
-            /***** MOBILE FIRST *****/
-            /** (between 320px and 767px) **/
+                /*** Design System ***/
 
-// Design System
-@import './_variables';
-@import './_placehorder';
+    /** Variables **/
+//Colors
+$txt-color: #000000;
+$main-color: #FFFFFF;
+
+$bg-primary-color: #F6F6F6;     // homepage section + menu
+$bg-secondary-color: #EAEAEA;   // search
+
+$deco-primary-color: #9356DC;
+$deco-secondary-color: #FF79DA;
+$deco-tertiary-color: #99E2D0;
+
+$dark-grey: #353535;    // bg footer + fontawesome icons
+
+//Text Configuration
+$main-font: 'Roboto';
+$resto-font: 'Shrikhand';
+
+$main-font-size: 18px;   // general
+$second-font-size: 16px;
+
+$title-font-size: 24px;   // homepage
+$sub-menu-size: 17px;
+$tag-font-size: 14px;
+
+$resto-font-size: 28px;   // pages menu
+
+    /** Mixins **/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    }
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    }
 
 
+                /***** MOBILE FIRST *****/
+            /*** (between 320px and 767px) ***/
 
-
-// Header
+    /** Header **/
 .navbar {
     height: 65px;
-    background-color: $white;
-    border-bottom: solid 1px $grey; // ombre portée à rajouter
-    @extend %flex-center;
+    background-color: $main-color;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    @include flex-center;
     .navbar__logo {
         height: 36px;
         width: 197px;
     }
 }
 
-
-// Hero Header
+    /** Hero Header **/
 .hero-header {
-    height: 375px;
-    padding: 0, 25px, 40px, 25px;
+    height: 340px;
+    @include flex-column;
+    //background-color: aqua;
+}
+
+// Search Section
+.search-banner {
+    width: 100%;
+    height: 50px;
+    //background-color: pink; //$bg-secondary-color;
 }
 
 form {
-    @extend %flex-center;
-    @extend %flex-column;
+    @include flex-column-center;
+    & .btn {
+        position: relative;
+        top: 200px;
+    }
 }
-
 .search {
-    height: 35px;
-    @extend %flex-row;
+    @include flex-row;
+    @include flex-center;
+    margin-top: 10px;
     gap: 17px;
 }
 
 .fa-location-dot {
-    height: 16px;
+    height: 18px;
     width: 12px;
     color: $dark-grey;
 }
 
 input {
-    @extend %flex-center;
-    border: none;
-    font-weight: 600;
     color: $dark-grey;
+    font-size: $second-font-size;
+    font-weight: 500;
+    border: none;
+    // enlever contour bleu
+}
+
+// Catchphrase Section
+h1 {
+    @include flex-center;
+    font-size: $title-font-size;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+p {
+    @include flex-center;
+    font-size: $main-font-size;
+    font-weight: 300;
+}
+
+
+    /** Fonctionnement **/
+.fonctionnement {
+    height: 440px;
+    @include flex-column;
+    //background-color: lightgreen;
+}
+
+h2 {
+    font-size: $title-font-size;
+    font-weight: 700;
+    margin: 50px 0 0 20px;
+}
+
+.notice {
+    @include flex-column-center;
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.notice-card {
+    height: 70px;
+    width: 90%;
+    @include flex-row;
+    background-color: $bg-primary-color;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    gap: 10px;
+    & .number {
+        height: 20px;
+        width: 20px;
+        color: $bg-primary-color;
+        font-size: $tag-font-size;
+        font-weight: 500;
+        border-radius: 50px;
+        border: none;
+        background-color: $deco-primary-color;
+        position: relative;
+        top: 25px;
+        left: -10px;
+    }
+    & img {
+        height: 18px;
+        position: relative;
+        top: 25px;
+    }
+    & p {
+        font-size: $second-font-size;
+        font-weight: 500;
+    }
+}
+
+    /** Restaurants Section **/
+.restaurants {
+    @include flex-column;
+    //background-color: lightcoral; //$bg-primary-color
+    padding-bottom: 65px;
+}
+
+.cards-column {
+    @include flex-column-center;
+    gap: 20px;
+}
+
+.card-resto {
+    height: 250px;
+    width: 90%;
+    border-radius: 15px;
+    background-color: $main-color;
+    @include flex-column;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    & .tag {
+        height: 30px;
+        width: 80px;
+        color: white;  //$deco-tertiary-color plus sombre
+        background-color: $deco-tertiary-color;
+        position: relative;
+        top: 15px;
+        left: 250px;
+    }
+    & img {
+        object-fit: cover;
+        height: 175px;
+        width: 100%;
+        border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    }
+    & .card-content {
+        @include flex-row;
+        justify-content: space-between;
+        & .txt {
+            @include flex-column;
+            & h3 {
+                font-size: $main-font-size;
+                font-weight: 700;
+            }
+            & p {
+                font-size: $sub-menu-size;
+                font-weight: 300;
+            }
+        }
+        & .fa-heart {
+            position: relative;
+            //
+        }
+    }
 }

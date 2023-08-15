@@ -1,29 +1,16 @@
+/*** Design System ***/
+/** Variables **/
+/** Mixins **/
 /***** MOBILE FIRST *****/
 /** (between 320px and 767px) **/
-/*** Colors ***/
-/*** Text Configuration ***/
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-}
-
-.links .links__icon {
-  display: flex;
-  flex-direction: row;
-}
-
 * {
+  padding: 0;
   margin: 0;
 }
 
 body {
   font-family: "Roboto";
+  color: #000000;
 }
 
 .btn {
@@ -33,6 +20,9 @@ body {
   border: none;
   color: #FFFFFF;
   background: linear-gradient(#FF79DA, #9356DC);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   font-weight: 500;
 }
@@ -40,7 +30,7 @@ body {
 .fa-heart {
   height: 22px;
   width: 21px;
-  color: #000000;
+  color: #353535;
 }
 
 footer {
@@ -67,14 +57,18 @@ footer a:visited {
 }
 
 .links {
+  display: flex;
+  flex-direction: column;
   gap: 7px;
 }
 .links .links__icon {
+  display: flex;
+  flex-direction: row;
   height: 19px;
   gap: 11px;
 }
 .links .links__a {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .little_icon {

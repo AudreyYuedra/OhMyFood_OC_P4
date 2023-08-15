@@ -26,22 +26,24 @@
 
     <main>
         <section class="hero-header">
-            <form method="get" action="http://localhost:5500">
-                <div class="search">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" name="lieu" id="lieu" value="Paris, Belleville"
-                        placeholder="lieu" size="15" maxlength="50">
-                </div>
-                <h1>
-                    Réservez le menu qui vous convient
-                </h1>
-                <p>
-                   Découvrez des restaurants d'exception,                       sélectionnés par nos soins.
-                </p>
-                <button class="btn">
-                    Explorez nos restaurants
-                </button>
-            </form>
+            <div class="search-banner">
+                <form method="post" action="#">
+                    <div class="search">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" name="lieu" id="lieu" value="Paris, Belleville"
+                            placeholder="lieu" size="12" maxlength="50">
+                    </div>
+                    <button class="btn">
+                        Explorez nos restaurants
+                    </button>
+                </form>
+            </div>
+            <h1>
+                Réservez le menu qui vous convient
+            </h1>
+            <p>
+                Découvrez des restaurants d'exception, sélectionnés par nos soins.
+            </p>
         </section>
 
         <section class="fonctionnement">
@@ -50,21 +52,21 @@
             </h2>
             <div class="notice">
                 <div class="notice-card">
-                    <p class="number">1</p> <!-- font rond -->
+                    <p class="number">1</p> <!-- fond rond -->
                     <img src="./assets/images/icones/mobile-screen-button.png">
                     <p>
                         Choisissez un restaurant
                     </p>
                 </div>
                 <div class="notice-card">
-                    <p class="number">2</p> <!-- font rond -->
+                    <p class="number">2</p> <!-- fond rond -->
                     <img src="./assets/images/icones/list-ul.png">
                     <p>
                         Composez votre menu
                     </p>
                 </div>
                 <div class="notice-card">
-                    <p class="number">3</p> <!-- font rond -->
+                    <p class="number">3</p> <!-- fond rond -->
                     <img src="./assets/images/icones/store.png">
                     <p>
                         Dégustez au restaurant
@@ -74,16 +76,16 @@
 
         </section>
 
-        <section class=""> <!-- restaurants -->
+        <section class="restaurants">
             <h2>
                 Restaurants
             </h2>
-            <div class=""> <!-- colonne cards -->
-                <article class="card">
+            <div class="cards-column">
+                <article class="card-resto">
                     <p class="tag">
                         Nouveau
                     </p>
-                    <img>
+                    <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
                     <div class="card-content">
                         <div class="txt">
                             <h3>La palette du goût</h3>
@@ -93,11 +95,11 @@
                         <!-- <i class="fa-solid fa-heart"></i> -->
                     </div>
                 </article>
-                <article class="card">
+                <article class="card-resto">
                     <p class="tag">
                         Nouveau
                     </p>
-                    <img>
+                    <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
                     <div class="card-content">
                         <div class="txt">
                             <h3>La note enchanté</h3>
@@ -107,8 +109,8 @@
                         <!-- <i class="fa-solid fa-heart"></i> -->
                     </div>
                 </article>
-                <article class="card">
-                    <img>
+                <article class="card-resto">
+                    <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
                     <div class="card-content">
                         <div class="txt">
                             <h3>À la française</h3>
@@ -118,8 +120,8 @@
                         <!-- <i class="fa-solid fa-heart"></i> -->
                     </div>
                 </article>
-                <article class="card">
-                    <img>
+                <article class="card-resto">
+                    <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
                     <div class="card-content">
                         <div class="txt">
                             <h3>Le délice des sens</h3>
