@@ -51,6 +51,13 @@ $resto-font-size: 28px;   // pages menu
     flex-direction: row;
     }
 
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 
                 /***** MOBILE FIRST *****/
             /*** (between 320px and 767px) ***/
@@ -59,7 +66,7 @@ $resto-font-size: 28px;   // pages menu
 .navbar {
     height: 65px;
     background-color: $main-color;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1));
     @include flex-center;
     .navbar__logo {
         height: 36px;
@@ -71,14 +78,14 @@ $resto-font-size: 28px;   // pages menu
 .hero-header {
     height: 340px;
     @include flex-column;
-    //background-color: aqua;
+    background-color: $bg-primary-color;
 }
 
 // Search Section
 .search-banner {
     width: 100%;
     height: 50px;
-    //background-color: pink; //$bg-secondary-color;
+    background-color: $bg-secondary-color;
 }
 
 form {
@@ -89,8 +96,7 @@ form {
     }
 }
 .search {
-    @include flex-row;
-    @include flex-center;
+    @include flex-row-center;
     margin-top: 10px;
     gap: 17px;
 }
@@ -106,19 +112,19 @@ input {
     font-size: $second-font-size;
     font-weight: 500;
     border: none;
-    // enlever contour bleu
+    // enlever contour bleu !!
 }
 
 // Catchphrase Section
-h1 {
-    @include flex-center;
+.hero-header h1 {
+    text-align: center;
     font-size: $title-font-size;
     font-weight: 700;
     margin-top: 40px;
 }
 
-p {
-    @include flex-center;
+.hero-header p {
+    text-align: center;
     font-size: $main-font-size;
     font-weight: 300;
 }
@@ -126,30 +132,31 @@ p {
 
     /** Fonctionnement **/
 .fonctionnement {
-    height: 440px;
+    height: 410px;
     @include flex-column;
-    //background-color: lightgreen;
+    background-color: $main-color;
 }
 
-h2 {
+.fonctionnement h2 {
     font-size: $title-font-size;
     font-weight: 700;
     margin: 50px 0 0 20px;
 }
 
 .notice {
-    @include flex-column-center;
+    @include flex-column;
     margin-top: 25px;
     gap: 20px;
 }
 
 .notice-card {
     height: 70px;
-    width: 90%;
+    width: 325px;
     @include flex-row;
     background-color: $bg-primary-color;
     border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+    margin-left: 30px;
     gap: 10px;
     & .number {
         height: 20px;
@@ -157,6 +164,9 @@ h2 {
         color: $bg-primary-color;
         font-size: $tag-font-size;
         font-weight: 500;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         border-radius: 50px;
         border: none;
         background-color: $deco-primary-color;
@@ -172,18 +182,27 @@ h2 {
     & p {
         font-size: $second-font-size;
         font-weight: 500;
+        display: flex;
+        align-items: center;
     }
 }
 
     /** Restaurants Section **/
 .restaurants {
     @include flex-column;
-    //background-color: lightcoral; //$bg-primary-color
+    background-color: $bg-primary-color;
     padding-bottom: 65px;
+}
+
+.restaurants h2 {
+    font-size: $title-font-size;
+    font-weight: 700;
+    margin: 50px 0 0 20px;
 }
 
 .cards-column {
     @include flex-column-center;
+    margin-top: 15px;
     gap: 20px;
 }
 
@@ -193,28 +212,31 @@ h2 {
     border-radius: 15px;
     background-color: $main-color;
     @include flex-column;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
     & .tag {
         height: 30px;
-        width: 80px;
+        width: 20%;
+        @include flex-center;
         color: white;  //$deco-tertiary-color plus sombre
         background-color: $deco-tertiary-color;
-        position: relative;
+        position: fixed;
         top: 15px;
-        left: 250px;
+        left: 75%;
     }
     & img {
         object-fit: cover;
-        height: 175px;
+        height: 170px;
         width: 100%;
         border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+        border-top-right-radius: 15px;
     }
     & .card-content {
         @include flex-row;
         justify-content: space-between;
         & .txt {
             @include flex-column;
+            padding: 15px 0 0 15px;
+            gap: 5px;
             & h3 {
                 font-size: $main-font-size;
                 font-weight: 700;
@@ -224,9 +246,28 @@ h2 {
                 font-weight: 300;
             }
         }
-        & .fa-heart {
-            position: relative;
-            //
+        & .fa-heart { // taile pas pris en compte !!!
+            height: 22px;
+            width: 21px;
+            padding: 30px 20px 0 0;
+            // animantion ici
         }
     }
+}
+
+
+
+/*** Medium devices (tablets, between 768px than 1024px) ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* ... */
+}
+
+/*** Large devices (desktop, between 1025px and 1440px) ***/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* ... */
+}
+
+/*** Large devices (largedesktop, more than 1440px) ***/
+@media (min-width: 1441px) {
+    /* ... */
 }

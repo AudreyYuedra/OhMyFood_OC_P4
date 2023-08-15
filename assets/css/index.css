@@ -7,7 +7,7 @@
 .navbar {
   height: 65px;
   background-color: #FFFFFF;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +22,13 @@
   height: 340px;
   display: flex;
   flex-direction: column;
+  background-color: #F6F6F6;
 }
 
 .search-banner {
   width: 100%;
   height: 50px;
+  background-color: #EAEAEA;
 }
 
 form {
@@ -43,7 +45,6 @@ form .btn {
 .search {
   display: flex;
   flex-direction: row;
-  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
@@ -63,31 +64,28 @@ input {
   border: none;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero-header h1 {
+  text-align: center;
   font-size: 24px;
   font-weight: 700;
   margin-top: 40px;
 }
 
-p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero-header p {
+  text-align: center;
   font-size: 18px;
   font-weight: 300;
 }
 
 /** Fonctionnement **/
 .fonctionnement {
-  height: 440px;
+  height: 410px;
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
 }
 
-h2 {
+.fonctionnement h2 {
   font-size: 24px;
   font-weight: 700;
   margin: 50px 0 0 20px;
@@ -96,20 +94,19 @@ h2 {
 .notice {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 25px;
   gap: 20px;
 }
 
 .notice-card {
   height: 70px;
-  width: 90%;
+  width: 325px;
   display: flex;
   flex-direction: row;
   background-color: #F6F6F6;
   border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+  margin-left: 30px;
   gap: 10px;
 }
 .notice-card .number {
@@ -118,6 +115,9 @@ h2 {
   color: #F6F6F6;
   font-size: 14px;
   font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   border-radius: 50px;
   border: none;
   background-color: #9356DC;
@@ -133,13 +133,22 @@ h2 {
 .notice-card p {
   font-size: 16px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 /** Restaurants Section **/
 .restaurants {
   display: flex;
   flex-direction: column;
+  background-color: #F6F6F6;
   padding-bottom: 65px;
+}
+
+.restaurants h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 50px 0 0 20px;
 }
 
 .cards-column {
@@ -147,6 +156,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
   gap: 20px;
 }
 
@@ -157,20 +167,23 @@ h2 {
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
 }
 .card-resto .tag {
   height: 30px;
-  width: 80px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   background-color: #99E2D0;
-  position: relative;
+  position: fixed;
   top: 15px;
-  left: 250px;
+  left: 75%;
 }
 .card-resto img {
   object-fit: cover;
-  height: 175px;
+  height: 170px;
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -183,6 +196,8 @@ h2 {
 .card-resto .card-content .txt {
   display: flex;
   flex-direction: column;
+  padding: 15px 0 0 15px;
+  gap: 5px;
 }
 .card-resto .card-content .txt h3 {
   font-size: 18px;
@@ -193,7 +208,22 @@ h2 {
   font-weight: 300;
 }
 .card-resto .card-content .fa-heart {
-  position: relative;
+  height: 22px;
+  width: 21px;
+  padding: 30px 20px 0 0;
+}
+
+/*** Medium devices (tablets, between 768px than 1024px) ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ... */
+}
+/*** Large devices (desktop, between 1025px and 1440px) ***/
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* ... */
+}
+/*** Large devices (largedesktop, more than 1440px) ***/
+@media (min-width: 1441px) {
+  /* ... */
 }
 
 /*# sourceMappingURL=index.css.map */
