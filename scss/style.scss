@@ -53,7 +53,7 @@ $resto-font-size: 28px;   // pages menu
     margin: 0;
 }
 
-// Body
+    /** Body **/
 body {
     font-family: $main-font;
     color: $txt-color;
@@ -67,7 +67,7 @@ body {
     color: $main-color;
     background: linear-gradient($deco-secondary-color, 
         $deco-primary-color);
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));  // ici, rajouter ombre portée
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     @include flex-center;
     font-size: $second-font-size;
     font-weight: 500;
@@ -82,7 +82,7 @@ body {
 }
 
 
-//Footer
+    /** Footer **/
 footer {
     height: 142px;
     background-color: $dark-grey;

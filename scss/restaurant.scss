@@ -1,0 +1,208 @@
+                /*** Design System ***/
+
+    /** Variables **/
+//Colors
+$txt-color: #000000;
+$main-color: #FFFFFF;
+
+$bg-primary-color: #F6F6F6;     // homepage section + menu
+$bg-secondary-color: #EAEAEA;   // search
+
+$deco-primary-color: #9356DC;
+$deco-secondary-color: #FF79DA;
+$deco-tertiary-color: #99E2D0;
+
+$dark-grey: #353535;    // bg footer + fontawesome icons
+
+//Text Configuration
+$main-font: 'Roboto';
+$resto-font: 'Shrikhand';
+
+$main-font-size: 18px;   // general
+$second-font-size: 16px;
+
+$title-font-size: 24px;   // homepage
+$sub-menu-size: 17px;
+$tag-font-size: 14px;
+
+$resto-font-size: 28px;   // pages menu
+
+    /** Mixins **/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    }
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    }
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+                /***** MOBILE FIRST *****/
+            /*** (between 320px and 767px) ***/
+
+    /** Header **/
+.navbar {
+    @include flex-center;
+    height: 65px;
+    background-color: $main-color;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1));
+    .navbar__back {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        & .fa-arrow-left {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            color: $dark-grey;
+        }
+    }
+    & .navbar__logo {
+        height: 36px;
+        width: 197px;
+    }
+}
+
+    
+    /** Hero Header **/
+.hero-header {
+    object-fit: cover;
+    height: 275px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+    /** Menu **/
+.menu {
+    @include flex-column-center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: pink; //$bg-primary-color;
+    position: relative;
+    top: -40px;
+    & .titlebar {
+        width: 350px;
+        @include flex-row;
+        justify-content: space-between;
+        margin-top: 30px;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        & h1 {
+            font-family: $resto-font;
+            font-size: $resto-font-size;
+            font-style: italic;
+        }
+    }
+}
+
+    /** Sections Menu **/
+.section-menu {
+    @include flex-column-center;
+    width: 95%;
+    background-color: burlywood; //$;
+    position: relative;
+    top: 80px;
+    margin-top: 30px;
+    gap: 50px
+}
+
+.card-menu {
+    @include flex-column;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    & h2 {
+        font-size: $second-font-size;
+        font-weight: 300;
+        margin-bottom: 5px;
+        border-bottom-style: solid;
+        border-bottom-width: 3px;
+        border-bottom-color: $deco-tertiary-color;
+        width: 40px;
+        padding-bottom: 5px;
+    }
+}
+
+.card {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: white; //$;
+    border-radius: 15px;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+    & .txt {
+        width: 80%;
+        @include flex-column;
+        padding: 10px 15px;
+        gap: 5px;
+    }
+    & .price {
+        width: 15%;
+        & p {
+            font-size: 15px;
+            font-weight: 700;
+            padding: 40px 20px 0 30px
+        }
+    }
+    /*& .check {
+        //visibility: hidden;
+        width: 15%;
+        background-color: $deco-tertiary-color;
+        border-radius: 15px;
+        & .fa-check {
+            color: $deo-tertiary-color;
+            border-radius: 50px;
+            background-color: $main-color;
+        }
+    }*/
+}
+
+
+
+
+
+
+
+
+
+
+
+/*** Medium devices (tablets, between 768px than 1024px) ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* ... */
+}
+
+/*** Large devices (desktop, between 1025px and 1440px) ***/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* ... */
+}
+
+/*** Large devices (largedesktop, more than 1440px) ***/
+@media (min-width: 1441px) {
+    /* ... */
+}
