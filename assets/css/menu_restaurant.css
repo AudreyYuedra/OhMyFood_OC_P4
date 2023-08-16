@@ -1,0 +1,52 @@
+/*** Design System ***/
+/** Variables **/
+/** Mixins **/
+/***** MOBILE FIRST *****/
+/*** (between 320px and 767px) ***/
+/** Header **/
+.navbar {
+  height: 65px;
+  background-color: #FFFFFF;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .fa-arrow-left {
+  position: relative;
+  left: 20px;
+}
+.navbar .navbar__logo {
+  height: 36px;
+  width: 197px;
+}
+
+/** Hero Header **/
+.hero-header {
+  object-fit: cover;
+  height: 200px;
+}
+
+/** Menu **/
+.menu {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #F6F6F6;
+}
+
+/*** Medium devices (tablets, between 768px than 1024px) ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ... */
+}
+/*** Large devices (desktop, between 1025px and 1440px) ***/
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* ... */
+}
+/*** Large devices (largedesktop, more than 1440px) ***/
+@media (min-width: 1441px) {
+  /* ... */
+}
+
+/*# sourceMappingURL=menu_restaurant.css.map */
