@@ -16,12 +16,11 @@ body {
 
 .btn {
   height: 50px;
-  width: 220px;
   border-radius: 25px;
   border: none;
   color: #FFFFFF;
   background: linear-gradient(#FF79DA, #9356DC);
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.3));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,12 +35,12 @@ body {
   align-items: center;
 }
 .heart .empty {
-  font-size: 24px;
+  font-size: 20px;
   color: #353535;
 }
 .heart .full {
-  visibility: hidden;
-  font-size: xx-large;
+  visibility: collapse;
+  font-size: 20px;
   color: linear-gradient(#9356DC, #FF79DA);
 }
 

@@ -91,6 +91,7 @@ $resto-font-size: 28px;   // pages menu
 form {
     @include flex-column-center;
     & .btn {
+        width: 220px;
         position: relative;
         top: 200px;
     }
