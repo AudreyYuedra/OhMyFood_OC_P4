@@ -48,7 +48,6 @@ body {
 footer {
   height: 142px;
   background-color: #353535;
-  gap: 16px;
   padding: 22px 25px;
 }
 
@@ -95,7 +94,25 @@ footer a:visited {
 
 /*** Medium devices (tablets, between 768px than 1024px) ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* ... */
+  footer {
+    height: 114px;
+    padding: 0;
+  }
+  .logo_white {
+    margin-top: 12px;
+    margin-left: 15px;
+    padding-bottom: 10px;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .links .links__icon {
+    gap: 5px;
+  }
 }
 /*** Large devices (desktop, between 1025px and 1440px) ***/
 @media (min-width: 1025px) and (max-width: 1440px) {

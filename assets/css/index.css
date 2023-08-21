@@ -38,6 +38,7 @@ form {
   align-items: center;
 }
 form .btn {
+  width: 220px;
   position: relative;
   top: 200px;
 }

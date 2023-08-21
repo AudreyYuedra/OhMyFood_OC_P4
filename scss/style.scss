@@ -44,6 +44,13 @@ $resto-font-size: 28px;   // pages menu
     flex-direction: row;
     }
 
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 
                 /***** MOBILE FIRST *****/
             /** (between 320px and 767px) **/
@@ -94,7 +101,6 @@ body {
 footer {
     height: 142px;
     background-color: $dark-grey;
-    gap: 16px;
     padding: 22px 25px;
 }
 
@@ -141,12 +147,26 @@ footer a {
 
 
 
-
-
-
 /*** Medium devices (tablets, between 768px than 1024px) ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* ... */
+    footer {
+        height: 114px;
+        padding: 0;
+    }
+
+    .logo_white {
+        margin-top: 12px;
+        margin-left: 15px;
+        padding-bottom: 10px;
+    }
+
+    .links {
+        @include flex-row-center;
+        gap: 12px;
+        & .links__icon {
+            gap: 5px;
+        }
+    }
 }
 
 /*** Large devices (desktop, between 1025px and 1440px) ***/
