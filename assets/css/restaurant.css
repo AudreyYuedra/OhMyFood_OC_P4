@@ -19,9 +19,8 @@
 }
 .navbar .navbar__back .fa-arrow-left {
   display: inline-block;
-  height: 30px;
-  width: 30px;
   color: #353535;
+  font-size: x-large;
 }
 .navbar .navbar__logo {
   height: 36px;
@@ -102,28 +101,26 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  height: 70px;
+  height: 80px;
   background-color: white;
   border-radius: 15px;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
-  /*& .check {
-      //visibility: hidden;
-      width: 15%;
-      background-color: $deco-tertiary-color;
-      border-radius: 15px;
-      & .fa-check {
-          color: $deo-tertiary-color;
-          border-radius: 50px;
-          background-color: $main-color;
-      }
-  }*/
 }
 .card .txt {
   width: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 10px 15px;
-  gap: 5px;
+  gap: 8px;
+}
+.card .txt h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.card .txt p {
+  font-size: 15px;
+  font-weight: 300;
 }
 .card .price {
   width: 15%;
@@ -131,7 +128,31 @@
 .card .price p {
   font-size: 15px;
   font-weight: 700;
-  padding: 40px 20px 0 30px;
+  padding: 40px 15px;
+}
+.card .check {
+  visibility: collapse;
+  width: 15%;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.card .check p {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: #FFFFFF;
+}
+.card .check p .fa-check {
+  color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 2px;
 }
 
 /*** Medium devices (tablets, between 768px than 1024px) ***/

@@ -67,18 +67,27 @@ body {
     color: $main-color;
     background: linear-gradient($deco-secondary-color, 
         $deco-primary-color);
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.2));
     @include flex-center;
     font-size: $second-font-size;
     font-weight: 500;
     // ici, animation
 }
 
-.fa-heart {
-    height: 22px;
-    width: 21px;
+.heart {
+    width: 35px;
+    @include flex-center;
+    & .empty {
+    font-size: 24px;
     color: $dark-grey;
     // ici, animation
+    }
+    & .full {
+        visibility: hidden;
+        font-size: xx-large;
+        color: linear-gradient($deco-primary-color, $deco-secondary-color);
+        // ici animation
+    }
 }
 
 
