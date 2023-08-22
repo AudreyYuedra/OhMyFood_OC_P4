@@ -184,11 +184,33 @@ footer {
 }
 
 /*** Large devices (desktop, between 1025px and 1440px) ***/
-@media (min-width: 1025px) and (max-width: 1440px) {
-    /* ... */
-}
+@media (min-width: 1025px) /*and (max-width: 1440px)*/ {
+    footer {
+        display: flex;
+        flex-flow: row-reverse;
+        height: 114px;
+        padding: 0;
+    }
 
-/*** Large devices (desktop, more than 1440px) ***/
-@media (min-width: 1441px) {
-    /* ... */
+    .logo_white {
+        margin: 32px 25px 0 0;
+        padding-bottom: 10px;
+    }
+
+    .links-footer {
+        @include flex-row-center;
+        gap: 40px;
+        padding-right: 100px;
+        .with-icon {
+            @include flex-row;
+            gap: 10px;
+            & .link {
+                gap: 5px;
+            }
+        }
+        & .without-icon {
+            @include flex-row;
+            gap: 10px;
+        }
+    }
 }
