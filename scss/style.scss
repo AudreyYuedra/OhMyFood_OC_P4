@@ -102,14 +102,13 @@ footer {
     height: 142px;
     background-color: $dark-grey;
     padding: 22px 25px;
-}
-
-footer a {
-    color: $main-color;
-    font-size: $second-font-size;
-    text-decoration: none;
-    &:visited {
+    & a {
+        color: $main-color;
+        font-size: $second-font-size;
         text-decoration: none;
+        &:visited {
+            text-decoration: none;
+        }
     }
 }
 
@@ -122,16 +121,28 @@ footer a {
         contrast(102%); //color svg
 }
 
-.links {
+.links-footer {
     @include flex-column;
     gap: 7px;
-    .links__icon {
-        @include flex-row;
-        height: 19px;
-        gap: 11px;
+    .with-icon {
+        @include flex-column;
+        gap: 7px;
+        & .link {
+            @include flex-row;
+            height: 19px;
+            gap: 11px;
+            & .little_icon {
+                position: relative;
+                top: 3px;
+            }
+            & a {
+                font-weight: 500;
+            }
+        }
     }
-    .links__a {
-        font-weight: 500;
+    & .without-icon {
+        @include flex-column;
+        gap: 7px;
     }
 }
 
@@ -140,10 +151,6 @@ footer a {
     width: 11px;
 }
 
-.links__icon .little_icon {
-    position: relative;
-    top: 3px;
-}
 
 
 
