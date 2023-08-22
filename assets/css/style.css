@@ -111,15 +111,24 @@ footer a:visited {
     margin-left: 15px;
     padding-bottom: 10px;
   }
-  .links {
+  .links-footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
   }
-  .links .links__icon {
+  .links-footer .with-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+  }
+  .links-footer .with-icon .link {
     gap: 5px;
+  }
+  .links-footer .without-icon {
+    display: flex;
+    flex-direction: row;
   }
 }
 /*** Large devices (desktop, between 1025px and 1440px) ***/

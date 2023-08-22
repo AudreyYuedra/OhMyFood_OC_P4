@@ -167,11 +167,18 @@ footer {
         padding-bottom: 10px;
     }
 
-    .links {
+    .links-footer {
         @include flex-row-center;
-        gap: 12px;
-        & .links__icon {
-            gap: 5px;
+        gap: 20px;
+        .with-icon {
+            @include flex-row;
+            gap: 7px;
+            & .link {
+                gap: 5px;
+            }
+        }
+        & .without-icon {
+            @include flex-row;
         }
     }
 }
