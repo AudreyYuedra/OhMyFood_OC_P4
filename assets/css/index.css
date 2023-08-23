@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
 }
-.navbar .navbar__logo {
+.navbar .logo-black {
   height: 36px;
   width: 197px;
 }
@@ -62,6 +62,8 @@ input {
   color: #353535;
   font-size: 16px;
   font-weight: 500;
+  border: none;
+  background-color: #EAEAEA;
   border: none;
 }
 
@@ -216,15 +218,96 @@ input {
 
 /*** Medium devices (tablets, between 768px than 1024px) ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* ... */
+  .navbar {
+    height: 95px;
+  }
+  .hero-header h1 {
+    font-size: 40px;
+  }
+  .hero-header p {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fonctionnement {
+    height: 230px;
+    width: 90%;
+  }
+  .fonctionnement .notice {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+  }
+  .fonctionnement .notice .notice-card {
+    width: 35%;
+    margin-left: 0;
+  }
+  .restaurants {
+    width: 90%;
+    padding-bottom: 40px;
+  }
+  .restaurants .cards-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 50px;
+  }
+  .restaurants .cards-column .card-resto {
+    width: 45%;
+  }
 }
 /*** Large devices (desktop, between 1025px and 1440px) ***/
-@media (min-width: 1025px) and (max-width: 1440px) {
-  /* ... */
+@media (min-width: 1025px) {
+  .navbar {
+    height: 95px;
+  }
+  .hero-header h1 {
+    font-size: 40px;
+  }
+  .hero-header p {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+  .fonctionnement {
+    height: 230px;
+  }
+  .fonctionnement h2 {
+    margin-left: 8.5%;
+  }
+  .notice {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8.5%;
+    gap: 25px;
+  }
+  .notice .notice-card {
+    width: 30%;
+    margin-left: 0;
+  }
+  .restaurants {
+    padding-bottom: 40px;
+  }
+  .restaurants h2 {
+    margin-left: 8.5%;
+  }
+  .restaurants .cards-column {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    flex-wrap: wrap;
+  }
+  .restaurants .cards-column .card-resto {
+    width: 40%;
+  }
 }
 /*** Large devices (largedesktop, more than 1440px) ***/
-@media (min-width: 1441px) {
-  /* ... */
-}
+/* ... */
 
 /*# sourceMappingURL=index.css.map */
