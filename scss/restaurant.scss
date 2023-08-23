@@ -99,7 +99,7 @@ $resto-font-size: 28px;   // pages menu
     @include flex-column-center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background-color: pink; //$bg-primary-color;
+    background-color: $bg-primary-color;
     position: relative;
     top: -40px;
     margin-bottom: -40px;
@@ -124,7 +124,6 @@ $resto-font-size: 28px;   // pages menu
 .section-menu {
     @include flex-column-center;
     width: 95%;
-    background-color: burlywood; //$;
     position: relative;
     top: 80px;
     margin-top: 30px;
@@ -157,7 +156,7 @@ $resto-font-size: 28px;   // pages menu
     justify-content: space-between;
     width: 100%;
     height: 80px;
-    background-color: white; //$;
+    background-color: $main-color;
     border-radius: 15px;
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
     & .txt {
@@ -208,26 +207,35 @@ $resto-font-size: 28px;   // pages menu
 }
 
 
-
-
-
-
-
-
-
-
-
 /*** Medium devices (tablets, between 768px than 1024px) ***/
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* ... */
+@media (min-width: 768px) /*and (max-width: 1024px)*/ {
+    main {
+        @include flex-column-center;
+        & img {
+            height: 385px;
+        }
+        & .menu {
+            width: 80%;
+            @include flex-center;
+            & .titlebar {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: -70px;
+            }
+        }
+        & .section-menu {
+            width: 70%;
+        }
+    }
 }
 
 /*** Large devices (desktop, between 1025px and 1440px) ***/
-@media (min-width: 1025px) and (max-width: 1440px) {
+//@media (min-width: 1025px) /*and (max-width: 1440px)*/ {
     /* ... */
-}
+//}
 
 /*** Large devices (largedesktop, more than 1440px) ***/
-@media (min-width: 1441px) {
+//@media (min-width: 1441px) {
     /* ... */
-}
+//}
