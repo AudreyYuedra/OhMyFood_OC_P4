@@ -261,7 +261,7 @@ input {
 
 
 /*** Medium devices (tablets, between 768px than 1024px) ***/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) /*and (max-width: 1024px)*/ {
     .navbar {
         height: 95px;
     }
@@ -282,7 +282,7 @@ input {
 
     .fonctionnement {
         height: 230px;
-        width: 90%;
+        width: 80%;
         & .notice {
             @include flex-row;
             margin-left: 30px;
@@ -294,7 +294,7 @@ input {
     }
 
     .restaurants {
-        width: 90%;
+        width: 80%;
         padding-bottom: 40px;
         & .cards-column {
             @include flex-row;
@@ -311,51 +311,11 @@ input {
 
 /*** Large devices (desktop, between 1025px and 1440px) ***/
 @media (min-width: 1025px) /*and (max-width: 1440px)*/ {
-    .navbar {
-        height: 95px;
-    }
-
-    .hero-header {
-        & h1 {
-            font-size: $title2-font-size;
-        }
-        & p {
-            font-size: $main-font-size;
-            margin-top: 25px;
-        }
-    }
-
-    .fonctionnement {
-        height: 230px;
-        & h2 {
-            margin-left: 8.5%;
-        }
-    }
 
     .notice {
-        @include flex-row;
-        margin-left: 8.5%;
         gap: 25px;
-    & .notice-card {
-        width: 30%;
-        margin-left: 0;
-        }
     }
 
-    .restaurants {
-        padding-bottom: 40px;
-        & h2 {
-        margin-left: 8.5%;
-        }
-        & .cards-column {
-            @include flex-row;
-            width: 95%;
-            flex-wrap: wrap;
-            & .card-resto {
-                width: 40%;
-            }
-        }
-    }
 }
 
 /*** Large devices (largedesktop, more than 1440px) ***/
