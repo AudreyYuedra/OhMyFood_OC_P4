@@ -220,7 +220,9 @@ input {
         height: 30px;
         width: 20%;
         @include flex-center;
-        color: white;  //$deco-tertiary-color plus sombre
+        font-size: $tag-font-size;
+        font-weight: 500;
+        color: darken($deco-tertiary-color, 50);
         background-color: $deco-tertiary-color;
         position: fixed;
         top: 15px;

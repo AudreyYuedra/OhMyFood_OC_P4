@@ -178,7 +178,9 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b6150;
   background-color: #99E2D0;
   position: fixed;
   top: 15px;
