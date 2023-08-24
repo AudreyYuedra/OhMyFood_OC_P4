@@ -67,6 +67,7 @@ body {
 }
 
 .btn {
+    display: inline-block;
     height: 50px;
     border-radius: 25px;
     border: none;
@@ -77,7 +78,11 @@ body {
     @include flex-center;
     font-size: $second-font-size;
     font-weight: 500;
-    // ici, animation
+    // animation
+    &:hover {
+        opacity: 0.8;
+        transition: 250ms;
+    }
 }
 
 .heart {
