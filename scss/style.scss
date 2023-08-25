@@ -88,18 +88,34 @@ body {
 .heart {
     width: 35px;
     @include flex-center;
-    & .empty {
-    font-size: 20px;
-    color: $dark-grey;
-    // ici, animation
-    }
-    & .full {
-        visibility: collapse;
-        font-size: 20px;
-        color: linear-gradient($deco-primary-color, $deco-secondary-color);
-        // ici animation
+    & input[type="checkbox"] {
+        display: none;
+        & .unchecked {
+            color: green;//$dark-grey;
+            z-index: 1;
+            &:checked {
+                visibility: collapse;
+                z-index: -1;
+            }
+        }
+        & .checked {
+            color: blue;//linear-gradient($deco-primary-color, $deco-secondary-color);
+            visibility: collapse;
+            z-index: -1;
+            &:checked {
+                visibility: visible;
+                z-index: 1;
+            }
+        }
     }
 }
+    /*& .unchecked:checked {
+        display: none;
+    }
+    & .checked:checked {
+        display: inline-block;
+    }*/
+
 
 
     /** Footer **/

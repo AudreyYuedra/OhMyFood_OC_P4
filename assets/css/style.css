@@ -39,16 +39,33 @@ body {
   justify-content: center;
   align-items: center;
 }
-.heart .empty {
-  font-size: 20px;
-  color: #353535;
+.heart input[type=checkbox] {
+  display: none;
 }
-.heart .full {
+.heart input[type=checkbox] .unchecked {
+  color: green;
+  z-index: 1;
+}
+.heart input[type=checkbox] .unchecked:checked {
   visibility: collapse;
-  font-size: 20px;
-  color: linear-gradient(#9356DC, #FF79DA);
+  z-index: -1;
+}
+.heart input[type=checkbox] .checked {
+  color: blue;
+  visibility: collapse;
+  z-index: -1;
+}
+.heart input[type=checkbox] .checked:checked {
+  visibility: visible;
+  z-index: 1;
 }
 
+/*& .unchecked:checked {
+    display: none;
+}
+& .checked:checked {
+    display: inline-block;
+}*/
 /** Footer **/
 footer {
   height: 142px;
