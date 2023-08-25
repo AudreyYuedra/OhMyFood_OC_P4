@@ -159,7 +159,27 @@
   position: relative;
   top: 2px;
 }
+.card:active .check, .card:focus .check {
+  visibility: visible;
+  transform-origin: right;
+  animation: card-check 300ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
+}
 
+@keyframes card-check {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 /*** Medium devices (tablets, between 768px than 1024px) ***/
 @media (min-width: 768px) {
   main {
