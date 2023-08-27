@@ -117,6 +117,14 @@ $resto-font-size: 28px;   // pages menu
             font-size: $resto-font-size;
             font-style: italic;
         }
+        & .heart {
+            width: 15%;
+            & .fa-heart {
+                position: absolute;
+                bottom: 11px;
+                right: 5%;
+            }
+        }
     }
 }
 

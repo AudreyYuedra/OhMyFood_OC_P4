@@ -65,6 +65,14 @@
   font-size: 28px;
   font-style: italic;
 }
+.menu .titlebar .heart {
+  width: 15%;
+}
+.menu .titlebar .heart .fa-heart {
+  position: absolute;
+  bottom: 11px;
+  right: 5%;
+}
 
 /** Sections Menu **/
 .section-menu {

@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="lds-roller">
             <div></div>
             <div></div>
@@ -31,7 +31,7 @@
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div> -->
 
     <header class="navbar">
         <img src="./assets/images/logo/ohmyfood@2x.svg" 
@@ -107,11 +107,13 @@
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </div>
-                            <label class="heart">
-                                <input type="checkbox">
-                                <i class="fa-regular fa-heart unchecked"></i>
-                                <i class="fa-solid fa-heart checked"></i>
-                            </label>
+                            <div class="heart">
+                                <input type="checkbox" id="check-heart-1">
+                                <label for="check-heart-1">
+                                    <i class="fa-regular fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
+                            </div>
                         </div>
                     </article>
                     <article class="card-resto">
@@ -125,8 +127,11 @@
                                 <p>Charonne</p>
                             </div>
                             <div class="heart">
-                                <i class="fa-regular fa-heart empty"></i>
-                                <i class="fa-solid fa-heart full"></i>
+                                <input type="checkbox" id="check-heart-2">
+                                <label for="check-heart-2">
+                                    <i class="fa-regular fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
                             </div>
                         </div>
                     </article>
@@ -138,8 +143,11 @@
                                 <p>Cité Rouge</p>
                             </div>
                             <div class="heart">
-                                <i class="fa-regular fa-heart empty"></i>
-                                <i class="fa-solid fa-heart full"></i>
+                                <input type="checkbox" id="check-heart-3">
+                                <label for="check-heart-3">
+                                    <i class="fa-regular fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
                             </div>
                         </div>
                     </article>
@@ -151,8 +159,11 @@
                                 <p>Folie-Méricourt</p>
                             </div>
                             <div class="heart">
-                                <i class="fa-regular fa-heart empty"></i>
-                                <i class="fa-solid fa-heart full"></i>
+                                <input type="checkbox" id="check-heart-4">
+                                <label for="check-heart-4">
+                                    <i class="fa-regular fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
                             </div>
                         </div>
                     </article>

@@ -86,36 +86,37 @@ body {
 }
 
 .heart {
-    width: 35px;
-    @include flex-center;
     & input[type="checkbox"] {
         display: none;
-        & .unchecked {
-            color: green;//$dark-grey;
-            z-index: 1;
-            &:checked {
+        & + label {
+            // état de base
+            & .empty {
+                z-index: 3;
+                font-size: $title-font-size;
+                color: $dark-grey;
+            }
+            & .full {
+                z-index: 2;
                 visibility: collapse;
-                z-index: -1;
+                font-size: $title-font-size;
+                background: linear-gradient($deco-primary-color, $deco-secondary-color);
+                background-clip: text;
+                color: transparent;
             }
         }
-        & .checked {
-            color: blue;//linear-gradient($deco-primary-color, $deco-secondary-color);
-            visibility: collapse;
-            z-index: -1;
-            &:checked {
+        // état checké
+        &:checked + label {
+            & .empty {
+                z-index: 2;
+                visibility: collapse;
+            }
+            & .full {
+                z-index: 3;
                 visibility: visible;
-                z-index: 1;
             }
         }
     }
 }
-    /*& .unchecked:checked {
-        display: none;
-    }
-    & .checked:checked {
-        display: inline-block;
-    }*/
-
 
 
     /** Footer **/

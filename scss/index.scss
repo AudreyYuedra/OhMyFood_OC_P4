@@ -352,14 +352,18 @@ input {
                 font-weight: 300;
             }
         }
-        & .fa-heart { // taile pas pris en compte !!!
-            height: 22px;
-            width: 21px;
-            padding: 30px 20px 0 0;
-            // animantion ici
+        & .heart {
+            width: 15%;
+            & .fa-heart {
+                font-size: 20px;
+                position: absolute;
+                bottom: 20px;
+                right: 5%;
+            }
         }
     }
 }
+
 
 
 

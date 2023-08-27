@@ -328,10 +328,14 @@ input {
   font-size: 17px;
   font-weight: 300;
 }
-.card-resto .card-content .fa-heart {
-  height: 22px;
-  width: 21px;
-  padding: 30px 20px 0 0;
+.card-resto .card-content .heart {
+  width: 15%;
+}
+.card-resto .card-content .heart .fa-heart {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 5%;
 }
 
 /*** Medium devices (tablets, between 768px than 1024px) ***/
