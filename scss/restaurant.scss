@@ -197,7 +197,6 @@ $resto-font-size: 28px;   // pages menu
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         @include flex-center;
-        z-index: -1;
         & p {
             height: 20px;
             width: 20px;
@@ -212,12 +211,12 @@ $resto-font-size: 28px;   // pages menu
             }
         }   
     }
-    &:active,
-    &:focus {
+    &:active {
         & .check {
             visibility: visible;
             transform-origin: right;
-            animation: card-check 300ms cubic-bezier(.32,0,.07,1) forwards;
+            animation: card-check 300ms cubic-bezier(.32,0,.07,1);
+            animation-fill-mode: forwards;
         }
     }
 }
@@ -230,12 +229,28 @@ $resto-font-size: 28px;   // pages menu
     50% {
         opacity: 0.5;
     }
-    85%,
-    100% {
-        opacity: 1;
+    80% {
+        opacity: 0.8;
     }
     100% {
         transform: scaleX(1);
+        opacity: 1;
+    }
+}
+@keyframes card-uncheck {
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    0% {
+        transform: scaleX(0);
+        opacity: 0.1;
     }
 }
 
