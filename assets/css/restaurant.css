@@ -1,6 +1,39 @@
 /*** Design System ***/
 /** Variables **/
 /** Mixins **/
+/** Keyframes **/
+@keyframes card-check {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes card-uncheck {
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  0% {
+    transform: scaleX(0);
+    opacity: 0.1;
+  }
+}
 /***** MOBILE FIRST *****/
 /*** (between 320px and 767px) ***/
 /** Header **/
@@ -170,41 +203,11 @@
   visibility: visible;
   transform-origin: right;
   animation: card-check 300ms cubic-bezier(0.32, 0, 0.07, 1);
+  animation-play-state: running;
   animation-fill-mode: forwards;
 }
 
-@keyframes card-check {
-  0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-@keyframes card-uncheck {
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-  }
-}
+@keyframes show-check {}
 /*** Medium devices (tablets, between 768px than 1024px) ***/
 @media (min-width: 768px) {
   main {

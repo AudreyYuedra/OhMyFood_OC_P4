@@ -58,6 +58,41 @@ $resto-font-size: 28px;   // pages menu
     align-items: center;
 }
 
+    /** Keyframes **/
+@keyframes card-check {
+    0% {
+        transform: scaleX(0);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes card-uncheck {
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    0% {
+        transform: scaleX(0);
+        opacity: 0.1;
+    }
+}
+
 
                 /***** MOBILE FIRST *****/
             /*** (between 320px and 767px) ***/
@@ -216,42 +251,14 @@ $resto-font-size: 28px;   // pages menu
             visibility: visible;
             transform-origin: right;
             animation: card-check 300ms cubic-bezier(.32,0,.07,1);
+            animation-play-state: running;
             animation-fill-mode: forwards;
         }
     }
 }
-
-@keyframes card-check {
-    0% {
-        transform: scaleX(0);
-        opacity: 0.1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-@keyframes card-uncheck {
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-    80%{
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    0% {
-        transform: scaleX(0);
-        opacity: 0.1;
-    }
+@keyframes show-check {
+    0% {}
+    100% {}
 }
 
 

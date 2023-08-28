@@ -3,6 +3,10 @@
 /** Mixins **/
 /***** MOBILE FIRST *****/
 /*** (between 320px and 767px) ***/
+body {
+  height: 100%;
+}
+
 /** Loader **/
 .loader {
   position: absolute;
@@ -110,15 +114,16 @@
 .loader {
   animation: loader 5s forwards;
 }
-.loader + .site {
-  transition: visible 5s;
+
+.site {
+  height: 0;
+  visibility: collapse;
+  animation: show-site 0s 5s forwards;
 }
 
-@keyframes site {
-  0% {
-    visibility: collapse;
-  }
-  100% {
+@keyframes show-site {
+  to {
+    height: auto;
     visibility: visible;
   }
 }

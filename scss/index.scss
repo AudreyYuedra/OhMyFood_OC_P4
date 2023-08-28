@@ -63,6 +63,9 @@ $resto-font-size: 28px;   // pages menu
                 /***** MOBILE FIRST *****/
             /*** (between 320px and 767px) ***/
 
+body {
+    height: 100%;
+}
     /** Loader **/
 .loader {
     position: absolute;
@@ -71,7 +74,6 @@ $resto-font-size: 28px;   // pages menu
     width: 100%;
     background-color: $main-color;
     @include flex-center;
-    //animation: loader /*3s forwards*/;
     & .lds-roller {
     display: inline-block;
         position: relative;
@@ -168,20 +170,24 @@ $resto-font-size: 28px;   // pages menu
 
 .loader {
     animation: loader 5s forwards;
-    & + .site {
-        transition: visible 5s;
-        //visibility: collapse;
-        //animation: site 5s forwards;
-    }
 }
-@keyframes site {
-    0% {
-        visibility: collapse;
-    }
-    100% {
+.site {
+    height: 0;
+    //transition: visible 5s;
+    visibility: collapse;
+    //display: none;
+    //opacity: 0;
+    animation: show-site 0s 5s forwards;
+}
+@keyframes show-site {
+    to {
+        height: auto;
+        //opacity: 1;
+        //display: block;
         visibility: visible;
     }
 }
+
 
     /** Header **/
 .navbar {
