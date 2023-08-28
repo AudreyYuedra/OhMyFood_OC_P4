@@ -143,26 +143,18 @@
   flex-direction: column;
   background-color: #F6F6F6;
 }
-
-.search-banner {
+.hero-header .search-banner {
   width: 100%;
   height: 50px;
   background-color: #EAEAEA;
 }
-
-form {
+.hero-header .search-banner form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-form .btn {
-  width: 220px;
-  position: relative;
-  top: 200px;
-}
-
-.search {
+.hero-header .search-banner form .search {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -170,14 +162,12 @@ form .btn {
   margin-top: 10px;
   gap: 17px;
 }
-
-.fa-location-dot {
+.hero-header .search-banner form .search .fa-location-dot {
   height: 18px;
   width: 12px;
   color: #353535;
 }
-
-input {
+.hero-header .search-banner form .search input {
   color: #353535;
   font-size: 16px;
   font-weight: 500;
@@ -185,15 +175,22 @@ input {
   background-color: #EAEAEA;
   border: none;
 }
-
-.hero-header h1 {
+.hero-header .search-banner form .btn {
+  width: 220px;
+  position: relative;
+  top: 200px;
+}
+.hero-header .catchphrase {
+  padding: 0 20px;
+  gap: 5px;
+}
+.hero-header .catchphrase h1 {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
   margin-top: 40px;
 }
-
-.hero-header p {
+.hero-header .catchphrase p {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
