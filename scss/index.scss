@@ -254,55 +254,52 @@ body {
     height: 410px;
     @include flex-column;
     background-color: $main-color;
-}
-
-.fonctionnement h2 {
-    font-size: $title-font-size;
-    font-weight: 700;
-    margin: 50px 0 0 20px;
-}
-
-.notice {
-    @include flex-column;
-    margin-top: 25px;
-    gap: 20px;
-}
-
-.notice-card {
-    height: 70px;
-    width: 325px;
-    @include flex-row;
-    background-color: $bg-primary-color;
-    border-radius: 20px;
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
-    margin-left: 30px;
-    gap: 10px;
-    & .number {
-        height: 20px;
-        width: 20px;
-        color: $bg-primary-color;
-        font-size: $tag-font-size;
-        font-weight: 500;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-radius: 50px;
-        border: none;
-        background-color: $deco-primary-color;
-        position: relative;
-        top: 25px;
-        left: -10px;
+    & h2 {
+        font-size: $title-font-size;
+        font-weight: 700;
+        margin: 50px 0 0 20px;
     }
-    & img {
-        height: 18px;
-        position: relative;
-        top: 25px;
+    & .notice {
+        @include flex-column;
+        margin-top: 25px;
+        gap: 20px;
     }
-    & p {
-        font-size: $second-font-size;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
+    & .notice-card {
+        height: 70px;
+        width: 325px;
+        @include flex-row;
+        background-color: $bg-primary-color;
+        border-radius: 20px;
+        filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+        margin-left: 30px;
+        gap: 10px;
+        & .number {
+            height: 20px;
+            width: 20px;
+            color: $bg-primary-color;
+            font-size: $tag-font-size;
+            font-weight: 500;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 50px;
+            border: none;
+            background-color: $deco-primary-color;
+            position: relative;
+            top: 25px;
+            left: -10px;
+        }
+        & img {
+            height: 18px;
+            position: relative;
+            top: 25px;
+        }
+        & p {
+            font-size: $second-font-size;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
