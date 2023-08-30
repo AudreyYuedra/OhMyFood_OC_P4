@@ -162,7 +162,7 @@
 }
 .card .txt h3 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .card .txt p {
   font-size: 15px;
@@ -178,7 +178,7 @@
 }
 .card .check {
   visibility: collapse;
-  width: 15%;
+  width: 20%;
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -202,9 +202,7 @@
 .card:active .check {
   visibility: visible;
   transform-origin: right;
-  animation: card-check 300ms cubic-bezier(0.32, 0, 0.07, 1);
-  animation-play-state: running;
-  animation-fill-mode: forwards;
+  animation: card-check 300ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
 }
 
 @keyframes show-check {}

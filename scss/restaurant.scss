@@ -210,7 +210,7 @@ $resto-font-size: 28px;   // pages menu
         gap: 8px;
         & h3 {
             font-size: $second-font-size;
-            font-weight: 500; // 600 ???
+            font-weight: 600; // 500 ne s'affiche pas
         }
         & p {
             font-size: 15px;
@@ -227,7 +227,7 @@ $resto-font-size: 28px;   // pages menu
     }
     & .check {
         visibility: collapse;
-        width: 15%;
+        width: 20%;
         background-color: $deco-tertiary-color;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
@@ -250,9 +250,7 @@ $resto-font-size: 28px;   // pages menu
         & .check {
             visibility: visible;
             transform-origin: right;
-            animation: card-check 300ms cubic-bezier(.32,0,.07,1);
-            animation-play-state: running;
-            animation-fill-mode: forwards;
+            animation: card-check 300ms cubic-bezier(.32,0,.07,1) forwards;
         }
     }
 }
