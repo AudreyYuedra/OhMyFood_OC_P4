@@ -93,6 +93,17 @@ $resto-font-size: 28px;   // pages menu
     }
 }
 
+@keyframes show-menu {
+    0% {
+        visibility: hidden;
+        transform: scaleX(0);
+    }
+    100% {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+}
+
 
                 /***** MOBILE FIRST *****/
             /*** (between 320px and 767px) ***/
@@ -178,6 +189,7 @@ $resto-font-size: 28px;   // pages menu
 }
 
 .card-menu {
+    visibility: hidden;
     @include flex-column;
     width: 100%;
     display: flex;
@@ -192,6 +204,19 @@ $resto-font-size: 28px;   // pages menu
         width: 40px;
         padding-bottom: 5px;
     }
+}
+
+.delay-menu-1 {
+    transform-origin: right;
+    animation: show-menu 500ms 800ms forwards;
+}
+.delay-menu-2 {
+    transform-origin: right;
+    animation: show-menu 500ms 1000ms forwards;
+}
+.delay-menu-3 {
+    transform-origin: right;
+    animation: show-menu 500ms 1200ms forwards;
 }
 
 .card {
@@ -254,10 +279,7 @@ $resto-font-size: 28px;   // pages menu
         }
     }
 }
-@keyframes show-check {
-    0% {}
-    100% {}
-}
+
 
 
 /*** Medium devices (tablets, between 768px than 1024px) ***/
@@ -282,13 +304,3 @@ $resto-font-size: 28px;   // pages menu
         }
     }
 }
-
-/*** Large devices (desktop, between 1025px and 1440px) ***/
-//@media (min-width: 1025px) /*and (max-width: 1440px)*/ {
-    /* ... */
-//}
-
-/*** Large devices (largedesktop, more than 1440px) ***/
-//@media (min-width: 1441px) {
-    /* ... */
-//}
