@@ -308,81 +308,80 @@ body {
     @include flex-column;
     background-color: $bg-primary-color;
     padding-bottom: 65px;
-}
-
-.restaurants h2 {
-    font-size: $title-font-size;
-    font-weight: 700;
-    margin: 50px 0 0 20px;
+    &  h2 {
+        font-size: $title-font-size;
+        font-weight: 700;
+        margin: 50px 0 0 20px;
+    }
 }
 
 .cards-column {
     @include flex-column-center;
     margin-top: 15px;
     gap: 20px;
-}
-
-.card-resto {
-    height: 250px;
-    width: 90%;
-    border-radius: 15px;
-    background-color: $main-color;
-    @include flex-column;
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
-    & a {
-        color: $txt-color;
-        text-decoration: none;
-        &:visited {
+    & .card-resto {
+        height: 250px;
+        width: 90%;
+        border-radius: 15px;
+        background-color: $main-color;
+        @include flex-column;
+        filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+        & a {
             color: $txt-color;
             text-decoration: none;
-        }
-    }
-    & .tag {
-        height: 30px;
-        width: 20%;
-        @include flex-center;
-        font-size: $tag-font-size;
-        font-weight: 500;
-        color: darken($deco-tertiary-color, 50);
-        background-color: $deco-tertiary-color;
-        position: fixed;
-        top: 15px;
-        left: 75%;
-    }
-    & img {
-        object-fit: cover;
-        height: 170px;
-        width: 100%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-    & .card-content {
-        @include flex-row;
-        justify-content: space-between;
-        & .txt {
-            @include flex-column;
-            padding: 15px 0 0 15px;
-            gap: 5px;
-            & h3 {
-                font-size: $main-font-size;
-                font-weight: 700;
-            }
-            & p {
-                font-size: $sub-menu-size;
-                font-weight: 300;
+            &:visited {
+                color: $txt-color;
+                text-decoration: none;
             }
         }
-        & .heart {
-            width: 15%;
-            & .fa-heart {
-                font-size: 20px;
-                position: absolute;
-                bottom: 20px;
-                right: 5%;
+        & .tag {
+            height: 30px;
+            width: 20%;
+            @include flex-center;
+            font-size: $tag-font-size;
+            font-weight: 500;
+            color: darken($deco-tertiary-color, 50);
+            background-color: $deco-tertiary-color;
+            position: fixed;
+            top: 15px;
+            left: 75%;
+        }
+        & img {
+            object-fit: cover;
+            height: 170px;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        & .card-content {
+            @include flex-row;
+            justify-content: space-between;
+            & .txt {
+                @include flex-column;
+                padding: 15px 0 0 15px;
+                gap: 5px;
+                & h3 {
+                    font-size: $main-font-size;
+                    font-weight: 700;
+                }
+                & p {
+                    font-size: $sub-menu-size;
+                    font-weight: 300;
+                }
+            }
+            & .heart {
+                width: 15%;
+                & .fa-heart {
+                    font-size: 20px;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 5%;
+                }
             }
         }
     }
 }
+
 
 
 

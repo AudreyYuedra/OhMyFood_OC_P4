@@ -260,7 +260,6 @@ body .site {
   background-color: #F6F6F6;
   padding-bottom: 65px;
 }
-
 .restaurants h2 {
   font-size: 24px;
   font-weight: 700;
@@ -275,8 +274,7 @@ body .site {
   margin-top: 15px;
   gap: 20px;
 }
-
-.card-resto {
+.cards-column .card-resto {
   height: 250px;
   width: 90%;
   border-radius: 15px;
@@ -285,15 +283,15 @@ body .site {
   flex-direction: column;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
 }
-.card-resto a {
+.cards-column .card-resto a {
   color: #000000;
   text-decoration: none;
 }
-.card-resto a:visited {
+.cards-column .card-resto a:visited {
   color: #000000;
   text-decoration: none;
 }
-.card-resto .tag {
+.cards-column .card-resto .tag {
   height: 30px;
   width: 20%;
   display: flex;
@@ -307,36 +305,36 @@ body .site {
   top: 15px;
   left: 75%;
 }
-.card-resto img {
+.cards-column .card-resto img {
   object-fit: cover;
   height: 170px;
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.card-resto .card-content {
+.cards-column .card-resto .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.card-resto .card-content .txt {
+.cards-column .card-resto .card-content .txt {
   display: flex;
   flex-direction: column;
   padding: 15px 0 0 15px;
   gap: 5px;
 }
-.card-resto .card-content .txt h3 {
+.cards-column .card-resto .card-content .txt h3 {
   font-size: 18px;
   font-weight: 700;
 }
-.card-resto .card-content .txt p {
+.cards-column .card-resto .card-content .txt p {
   font-size: 17px;
   font-weight: 300;
 }
-.card-resto .card-content .heart {
+.cards-column .card-resto .card-content .heart {
   width: 15%;
 }
-.card-resto .card-content .heart .fa-heart {
+.cards-column .card-resto .card-content .heart .fa-heart {
   font-size: 20px;
   position: absolute;
   bottom: 20px;
