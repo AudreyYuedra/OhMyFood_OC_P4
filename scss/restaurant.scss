@@ -271,6 +271,7 @@ $resto-font-size: 28px;   // pages menu
             }
         }   
     }
+    &:hover,
     &:active {
         & .check {
             visibility: visible;
