@@ -257,6 +257,7 @@ $resto-font-size: 28px;   // pages menu
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         @include flex-center;
+        animation: card-check 300ms cubic-bezier(.32,0,.07,1) forwards;
         & p {
             height: 20px;
             width: 20px;
@@ -276,7 +277,7 @@ $resto-font-size: 28px;   // pages menu
         & .check {
             visibility: visible;
             transform-origin: right;
-            animation: card-check 300ms cubic-bezier(.32,0,.07,1) forwards;
+            animation: card-uncheck 300ms cubic-bezier(.32,0,.07,1) forwards;
         }
     }
 }
