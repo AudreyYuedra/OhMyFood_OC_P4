@@ -58,6 +58,12 @@ $resto-font-size: 28px;   // pages menu
     align-items: center;
 }
 
+@mixin hidden-txt {
+    white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+    overflow: hidden; /* Masque le texte qui dépasse la largeur du conteneur */
+    text-overflow: ellipsis; /* Ajoute des pointillés à la fin du texte tronqué */
+}
+
     /** Keyframes **/
 @keyframes card-check {
     0% {
@@ -223,7 +229,7 @@ $resto-font-size: 28px;   // pages menu
     @include flex-row;
     justify-content: space-between;
     width: 100%;
-    height: 80px;
+    height: 75px;
     background-color: $main-color;
     border-radius: 15px;
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
@@ -233,6 +239,7 @@ $resto-font-size: 28px;   // pages menu
         justify-content: center;
         padding: 10px 15px;
         gap: 8px;
+        @include hidden-txt;
         & h3 {
             font-size: $second-font-size;
             font-weight: 600; // 500 ne s'affiche pas
@@ -243,7 +250,7 @@ $resto-font-size: 28px;   // pages menu
         }
     }
     & .price {
-        width: 15%;
+        width: 20%;
         & p {
             font-size: 15px;
             font-weight: 700;
@@ -272,12 +279,19 @@ $resto-font-size: 28px;   // pages menu
             }
         }   
     }
-    &:hover,
-    &:active {
+    &:hover {
         & .check {
             visibility: visible;
             transform-origin: right;
             animation: card-uncheck 300ms cubic-bezier(.32,0,.07,1) forwards;
+        }
+        & .txt {
+            width: 60%;
+        }
+        & h3, p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 }
