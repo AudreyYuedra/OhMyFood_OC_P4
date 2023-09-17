@@ -19,6 +19,22 @@
     opacity: 1;
   }
 }
+@keyframes card-uncheck {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0.1;
+  }
+}
 @keyframes show-menu {
   0% {
     visibility: hidden;
@@ -199,7 +215,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 400ms cubic-bezier(0.32, 0, 0.07, 1);
+  animation: card-uncheck 400ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
 }
 .card .check p {
   height: 20px;
@@ -214,15 +230,18 @@
   position: relative;
   top: 2px;
 }
-.card:hover .check {
+.card:hover .check,
+.card :active .check {
   visibility: visible;
   transform-origin: right;
   animation: card-check 400ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
 }
-.card:hover h3, .card:hover p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.card:hover h3, .card:hover p,
+.card :active h3,
+.card :active p {
+  white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+  overflow: hidden; /* Masque le texte qui dépasse la largeur du conteneur */
+  text-overflow: ellipsis; /* Ajoute des pointillés à la fin du texte tronqué */
 }
 
 /*** Medium devices (tablets, between 768px than 1024px) ***/

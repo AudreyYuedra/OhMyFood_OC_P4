@@ -82,6 +82,23 @@ $resto-font-size: 28px;   // pages menu
     }
 }
 
+@keyframes card-uncheck {
+    0% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: scaleX(0);
+        opacity: 0.1;
+    }
+}
+
 @keyframes show-menu {
     0% {
         visibility: hidden;
@@ -247,7 +264,7 @@ $resto-font-size: 28px;   // pages menu
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         @include flex-center;
-        transition: 400ms cubic-bezier(.32,0,.07,1);
+        animation: card-uncheck 400ms cubic-bezier(.32,0,.07,1) forwards;
         & p {
             height: 20px;
             width: 20px;
@@ -262,17 +279,15 @@ $resto-font-size: 28px;   // pages menu
             }
         }   
     }
-    &:hover {
+    &:hover,
+    :active {
         & .check {
             visibility: visible;
             transform-origin: right;
             animation: card-check 400ms cubic-bezier(.32,0,.07,1) forwards;
-            //transform: /*????*/;
         }
         & h3, p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            @include hidden-txt;
         }
     }
 }
