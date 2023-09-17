@@ -19,22 +19,6 @@
     opacity: 1;
   }
 }
-@keyframes card-uncheck {
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-  }
-}
 @keyframes show-menu {
   0% {
     visibility: hidden;
@@ -180,7 +164,7 @@
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
 }
 .card .txt {
-  width: 80%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,7 +199,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: card-check 300ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
+  transition: 400ms cubic-bezier(0.32, 0, 0.07, 1);
 }
 .card .check p {
   height: 20px;
@@ -233,10 +217,7 @@
 .card:hover .check {
   visibility: visible;
   transform-origin: right;
-  animation: card-uncheck 300ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
-}
-.card:hover .txt {
-  width: 60%;
+  animation: card-check 400ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
 }
 .card:hover h3, .card:hover p {
   overflow: hidden;

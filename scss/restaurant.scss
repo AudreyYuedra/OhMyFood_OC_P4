@@ -82,23 +82,6 @@ $resto-font-size: 28px;   // pages menu
     }
 }
 
-@keyframes card-uncheck {
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-    80%{
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    0% {
-        transform: scaleX(0);
-        opacity: 0.1;
-    }
-}
-
 @keyframes show-menu {
     0% {
         visibility: hidden;
@@ -234,7 +217,7 @@ $resto-font-size: 28px;   // pages menu
     border-radius: 15px;
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
     & .txt {
-        width: 80%;
+        width: 70%;
         @include flex-column;
         justify-content: center;
         padding: 10px 15px;
@@ -264,7 +247,7 @@ $resto-font-size: 28px;   // pages menu
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         @include flex-center;
-        animation: card-check 300ms cubic-bezier(.32,0,.07,1) forwards;
+        transition: 400ms cubic-bezier(.32,0,.07,1);
         & p {
             height: 20px;
             width: 20px;
@@ -283,10 +266,8 @@ $resto-font-size: 28px;   // pages menu
         & .check {
             visibility: visible;
             transform-origin: right;
-            animation: card-uncheck 300ms cubic-bezier(.32,0,.07,1) forwards;
-        }
-        & .txt {
-            width: 60%;
+            animation: card-check 400ms cubic-bezier(.32,0,.07,1) forwards;
+            //transform: /*????*/;
         }
         & h3, p {
             overflow: hidden;
