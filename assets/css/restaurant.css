@@ -175,7 +175,7 @@
   font-weight: 700;
   padding: 40px 15px;
 }
-.card .check {
+.card .check {      /* état de base */
   width: 20%;
   background-color: #99E2D0;
   border-top-right-radius: 15px;

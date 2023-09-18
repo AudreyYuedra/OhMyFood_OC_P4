@@ -224,7 +224,7 @@ $resto-font-size: 28px;   // pages menu
             padding: 40px 15px;
         }
     }
-    & .check {
+    & .check {              // état de base
         width: 20%;
         background-color: $deco-tertiary-color;
         border-top-right-radius: 15px;
