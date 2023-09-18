@@ -3,39 +3,6 @@
 /** Variables **/
 /** Mixins **/
 /** Keyframes **/
-/*@keyframes card-check {
-    0% {
-        transform: scaleX(0);
-        opacity: 0.1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-
-@keyframes card-uncheck {
-    0% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: scaleX(0);
-        opacity: 0.1;
-    }
-}*/
 @keyframes show-menu {
   0% {
     visibility: hidden;
@@ -232,11 +199,6 @@
   justify-content: center;
   position: relative;
   top: 2px;
-}
-.card:hover, .card:active {
-  /*&:not(:hover) {
-      animation: card-uncheck 400ms cubic-bezier(.32,0,.07,1) forwards;
-  }*/
 }
 .card:hover .check, .card:active .check {
   opacity: 1;

@@ -65,40 +65,6 @@ $resto-font-size: 28px;   // pages menu
 }
 
     /** Keyframes **/
-/*@keyframes card-check {
-    0% {
-        transform: scaleX(0);
-        opacity: 0.1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-
-@keyframes card-uncheck {
-    0% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: scaleX(0);
-        opacity: 0.1;
-    }
-}*/
-
 @keyframes show-menu {
     0% {
         visibility: hidden;
@@ -259,7 +225,6 @@ $resto-font-size: 28px;   // pages menu
         }
     }
     & .check {
-        //visibility: collapse;
         width: 20%;
         background-color: $deco-tertiary-color;
         border-top-right-radius: 15px;
@@ -285,18 +250,12 @@ $resto-font-size: 28px;   // pages menu
     &:hover,
     &:active {
         & .check {
-            //visibility: visible;
-            //transform-origin: right;
-            //animation: card-check 400ms cubic-bezier(.32,0,.07,1) forwards;
             opacity: 1;
             transform: translateX(0%);
         }
         & h3, p {
             @include hidden-txt;
         }
-        /*&:not(:hover) {
-            animation: card-uncheck 400ms cubic-bezier(.32,0,.07,1) forwards;
-        }*/
     }
 }
 

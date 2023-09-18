@@ -103,7 +103,7 @@ body {
         background: linear-gradient($deco-primary-color, $deco-secondary-color);
         background-clip: text;
         color: transparent;
-        -webkit-background-clip: text;              // compatibilité nav
+        -webkit-background-clip: text;              // compatibilité navigateurs
     }
 }
 
