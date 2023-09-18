@@ -3,38 +3,39 @@
 /** Variables **/
 /** Mixins **/
 /** Keyframes **/
-@keyframes card-check {
-  0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
+/*@keyframes card-check {
+    0% {
+        transform: scaleX(0);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
 }
+
 @keyframes card-uncheck {
-  0% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: scaleX(0);
-    opacity: 0.1;
-  }
-}
+    0% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: scaleX(0);
+        opacity: 0.1;
+    }
+}*/
 @keyframes show-menu {
   0% {
     visibility: hidden;
@@ -170,6 +171,7 @@
 }
 
 .card {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -207,7 +209,6 @@
   padding: 40px 15px;
 }
 .card .check {
-  visibility: collapse;
   width: 20%;
   background-color: #99E2D0;
   border-top-right-radius: 15px;
@@ -215,7 +216,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: card-uncheck 400ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 400ms cubic-bezier(0.32, 0, 0.07, 1);
 }
 .card .check p {
   height: 20px;
@@ -230,15 +233,16 @@
   position: relative;
   top: 2px;
 }
-.card:hover .check,
-.card :active .check {
-  visibility: visible;
-  transform-origin: right;
-  animation: card-check 400ms cubic-bezier(0.32, 0, 0.07, 1) forwards;
+.card:hover, .card:active {
+  /*&:not(:hover) {
+      animation: card-uncheck 400ms cubic-bezier(.32,0,.07,1) forwards;
+  }*/
 }
-.card:hover h3, .card:hover p,
-.card :active h3,
-.card :active p {
+.card:hover .check, .card:active .check {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.card:hover h3, .card:hover p, .card:active h3, .card:active p {
   white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
   overflow: hidden; /* Masque le texte qui dépasse la largeur du conteneur */
   text-overflow: ellipsis; /* Ajoute des pointillés à la fin du texte tronqué */

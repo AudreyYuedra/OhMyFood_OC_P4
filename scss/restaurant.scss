@@ -65,7 +65,7 @@ $resto-font-size: 28px;   // pages menu
 }
 
     /** Keyframes **/
-@keyframes card-check {
+/*@keyframes card-check {
     0% {
         transform: scaleX(0);
         opacity: 0.1;
@@ -97,7 +97,7 @@ $resto-font-size: 28px;   // pages menu
         transform: scaleX(0);
         opacity: 0.1;
     }
-}
+}*/
 
 @keyframes show-menu {
     0% {
@@ -226,6 +226,7 @@ $resto-font-size: 28px;   // pages menu
 }
 
 .card {
+    overflow: hidden;
     @include flex-row;
     justify-content: space-between;
     width: 100%;
@@ -258,13 +259,15 @@ $resto-font-size: 28px;   // pages menu
         }
     }
     & .check {
-        visibility: collapse;
+        //visibility: collapse;
         width: 20%;
         background-color: $deco-tertiary-color;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         @include flex-center;
-        animation: card-uncheck 400ms cubic-bezier(.32,0,.07,1) forwards;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 400ms cubic-bezier(.32,0,.07,1);
         & p {
             height: 20px;
             width: 20px;
@@ -280,15 +283,20 @@ $resto-font-size: 28px;   // pages menu
         }   
     }
     &:hover,
-    :active {
+    &:active {
         & .check {
-            visibility: visible;
-            transform-origin: right;
-            animation: card-check 400ms cubic-bezier(.32,0,.07,1) forwards;
+            //visibility: visible;
+            //transform-origin: right;
+            //animation: card-check 400ms cubic-bezier(.32,0,.07,1) forwards;
+            opacity: 1;
+            transform: translateX(0%);
         }
         & h3, p {
             @include hidden-txt;
         }
+        /*&:not(:hover) {
+            animation: card-uncheck 400ms cubic-bezier(.32,0,.07,1) forwards;
+        }*/
     }
 }
 
